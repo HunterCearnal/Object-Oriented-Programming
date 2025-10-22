@@ -24,11 +24,15 @@ Point Point::operator*(const Point& other) const {
 
 //Arithmetic Assignment Operator
 Point& Point::operator+=(const Point& other) {
-    return Point(other.x, other.y);
+    x += other.x;
+    y += other.y;
+    return *this;
 }
 
 Point& Point::operator*=(const Point& other) {
-    return Point(other.x, other.y);
+    x *= other.x;
+    y *= other.y;
+    return *this;
 }
 
 int& Point::operator[](int index) {
